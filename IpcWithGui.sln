@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpcWithGui.Client", "IpcWithGui.Client\IpcWithGui.Client.csproj", "{ED29923D-C582-4392-B8A7-A9BF2D348514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpcWithGui.Server", "IpcWithGui.Server\IpcWithGui.Server.csproj", "{BA515CE2-FE3C-42EB-B19B-E472045630EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IpcWithGui.Shared", "IpcWithGui.Shared\IpcWithGui.Shared.csproj", "{67B2CAF4-F927-4F8C-9E35-B83217E2AD12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED29923D-C582-4392-B8A7-A9BF2D348514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED29923D-C582-4392-B8A7-A9BF2D348514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED29923D-C582-4392-B8A7-A9BF2D348514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED29923D-C582-4392-B8A7-A9BF2D348514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA515CE2-FE3C-42EB-B19B-E472045630EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA515CE2-FE3C-42EB-B19B-E472045630EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA515CE2-FE3C-42EB-B19B-E472045630EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA515CE2-FE3C-42EB-B19B-E472045630EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B2CAF4-F927-4F8C-9E35-B83217E2AD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B2CAF4-F927-4F8C-9E35-B83217E2AD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B2CAF4-F927-4F8C-9E35-B83217E2AD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B2CAF4-F927-4F8C-9E35-B83217E2AD12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs2013-01:8080/tfs/ntinnovationcompanygmbh
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IpcWithGui.Client\\IpcWithGui.Client.csproj
+		SccProjectName1 = IpcWithGui.Client
+		SccLocalPath1 = IpcWithGui.Client
+		SccProjectUniqueName2 = IpcWithGui.Server\\IpcWithGui.Server.csproj
+		SccProjectName2 = IpcWithGui.Server
+		SccLocalPath2 = IpcWithGui.Server
+		SccProjectUniqueName3 = IpcWithGui.Shared\\IpcWithGui.Shared.csproj
+		SccProjectName3 = IpcWithGui.Shared
+		SccLocalPath3 = IpcWithGui.Shared
+	EndGlobalSection
+EndGlobal
