@@ -71,6 +71,7 @@ namespace IpcWithGui.Server.Models {
             switch (request) {
                 case CommunicationProtocol.Disconnect:
                     await _stream.SendBytes(CommunicationProtocol.Ok);
+                    await _stream.FlushAsync();
                     Disconnected?.Invoke(this, EventArgs.Empty);
                     break;
                 case CommunicationProtocol.Ping:

@@ -90,7 +90,7 @@ namespace IpcWithGui.Server.ViewModels {
                 while (true) {
                     ClientConnection client = await server.Listen(Config.PipeName);
 
-                    if (client.ClientId == Config.ShutdownCommand)
+                    if (client == null || client.ClientId == Config.ShutdownCommand)
                         break;
                     else
                         Client_OnConnected(client);

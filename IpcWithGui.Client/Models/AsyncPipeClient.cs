@@ -127,8 +127,11 @@ namespace IpcWithGui.Client.Models {
             string response = await _stream.ReadBytes();
 
             // If so, we can close the stream ...
-            if (response == CommunicationProtocol.Ok)
+            if (response == CommunicationProtocol.Ok) {
                 _stream.Close();
+                _stream.Dispose();
+                _stream = null;
+            }
 
             // ... and notify the UI
             RaisePropertyChanged(nameof(IsConnected));

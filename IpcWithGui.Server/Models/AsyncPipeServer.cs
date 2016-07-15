@@ -22,8 +22,13 @@ namespace IpcWithGui.Server.Models {
 
                 _logger.Info($"Wating for incoming connections");
 
-                //await Task.Factory.FromAsync(pipeServer.BeginWaitForConnection, pipeServer.EndWaitForConnection, null);
-                pipeServer.WaitForConnection();
+                Task t = Task.Factory.FromAsync(pipeServer.BeginWaitForConnection, pipeServer.EndWaitForConnection, null);
+                t.Wait();
+
+                if (t.Exception != null) {
+                    _logger.Error(t.Exception, "Error while waiting for incoming connections!");
+                    return null;
+                }
 
                 _logger.Info($"Client connected, reading handshake");
                 string handshake = await pipeServer.ReadBytes();
@@ -35,8 +40,9 @@ namespace IpcWithGui.Server.Models {
                 } else if (handshake == Config.ShutdownCommand) {
                     _logger.Debug("Shutdown request received, closing server stream");
                     IsActive = false;
-                    pipeServer.Dispose();
                     pipeServer.Close();
+                    pipeServer.Dispose();
+                    pipeServer = null;
                     return new ClientConnection(Config.ShutdownCommand, null);
                 }
 
